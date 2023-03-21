@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67549CF829870C270081B2C6 /* FLAGMAPPERApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67549CF729870C270081B2C6 /* FLAGMAPPERApp.swift */; };
+		67549CFA29870C270081B2C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67549CF929870C270081B2C6 /* ContentView.swift */; };
+		67549CFC29870C280081B2C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67549CFB29870C280081B2C6 /* Assets.xcassets */; };
+		67549CFF29870C280081B2C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67549CFE29870C280081B2C6 /* Preview Assets.xcassets */; };
+		67549D0929870C290081B2C6 /* FLAGMAPPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67549D0829870C290081B2C6 /* FLAGMAPPERTests.swift */; };
+		67549D1329870C290081B2C6 /* FLAGMAPPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67549D1229870C290081B2C6 /* FLAGMAPPERUITests.swift */; };
+		67549D1529870C290081B2C6 /* FLAGMAPPERUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67549D1429870C290081B2C6 /* FLAGMAPPERUITestsLaunchTests.swift */; };
+		67549D2229870F420081B2C6 /* MarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67549D2129870F420081B2C6 /* MarkerView.swift */; };
+		67549D2429870F4A0081B2C6 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67549D2329870F4A0081B2C6 /* ListView.swift */; };
+		67549D28298712380081B2C6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67549D27298712380081B2C6 /* LocationManager.swift */; };
+		67B35AAB298ACAF700499247 /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B35AAA298ACAF700499247 /* FileHandler.swift */; };
+		67B35AAD298ACC9700499247 /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B35AAC298ACC9700499247 /* MapLocation.swift */; };
+		67B35AAF298AD53500499247 /* FMLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B35AAE298AD53500499247 /* FMLocation.swift */; };
+		67B35AB1298AD59B00499247 /* FMFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B35AB0298AD59B00499247 /* FMFlag.swift */; };
+		67B35AB3298AD6E000499247 /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B35AB2298AD6E000499247 /* ImageHandler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67549D0529870C290081B2C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67549CEC29870C270081B2C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67549CF329870C270081B2C6;
+			remoteInfo = FLAGMAPPER;
+		};
+		67549D0F29870C290081B2C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67549CEC29870C270081B2C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67549CF329870C270081B2C6;
+			remoteInfo = FLAGMAPPER;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		67549CF429870C270081B2C6 /* FLAGMAPPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLAGMAPPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67549CF729870C270081B2C6 /* FLAGMAPPERApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLAGMAPPERApp.swift; sourceTree = "<group>"; };
+		67549CF929870C270081B2C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		67549CFB29870C280081B2C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67549CFE29870C280081B2C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		67549D0429870C290081B2C6 /* FLAGMAPPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLAGMAPPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67549D0829870C290081B2C6 /* FLAGMAPPERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLAGMAPPERTests.swift; sourceTree = "<group>"; };
+		67549D0E29870C290081B2C6 /* FLAGMAPPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLAGMAPPERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67549D1229870C290081B2C6 /* FLAGMAPPERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLAGMAPPERUITests.swift; sourceTree = "<group>"; };
+		67549D1429870C290081B2C6 /* FLAGMAPPERUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLAGMAPPERUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		67549D2129870F420081B2C6 /* MarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerView.swift; sourceTree = "<group>"; };
+		67549D2329870F4A0081B2C6 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		67549D27298712380081B2C6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		67B35AAA298ACAF700499247 /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
+		67B35AAC298ACC9700499247 /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
+		67B35AAE298AD53500499247 /* FMLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMLocation.swift; sourceTree = "<group>"; };
+		67B35AB0298AD59B00499247 /* FMFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMFlag.swift; sourceTree = "<group>"; };
+		67B35AB2298AD6E000499247 /* ImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67549CF129870C270081B2C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67549D0129870C290081B2C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67549D0B29870C290081B2C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67549CEB29870C270081B2C6 = {
+			isa = PBXGroup;
+			children = (
+				67B35AB2298AD6E000499247 /* ImageHandler.swift */,
+				67549D27298712380081B2C6 /* LocationManager.swift */,
+				67549D2129870F420081B2C6 /* MarkerView.swift */,
+				67549D2329870F4A0081B2C6 /* ListView.swift */,
+				67B35AAA298ACAF700499247 /* FileHandler.swift */,
+				67B35AAC298ACC9700499247 /* MapLocation.swift */,
+				67B35AAE298AD53500499247 /* FMLocation.swift */,
+				67B35AB0298AD59B00499247 /* FMFlag.swift */,
+				67549CF629870C270081B2C6 /* FLAGMAPPER */,
+				67549D0729870C290081B2C6 /* FLAGMAPPERTests */,
+				67549D1129870C290081B2C6 /* FLAGMAPPERUITests */,
+				67549CF529870C270081B2C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67549CF529870C270081B2C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67549CF429870C270081B2C6 /* FLAGMAPPER.app */,
+				67549D0429870C290081B2C6 /* FLAGMAPPERTests.xctest */,
+				67549D0E29870C290081B2C6 /* FLAGMAPPERUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67549CF629870C270081B2C6 /* FLAGMAPPER */ = {
+			isa = PBXGroup;
+			children = (
+				67549CF729870C270081B2C6 /* FLAGMAPPERApp.swift */,
+				67549CF929870C270081B2C6 /* ContentView.swift */,
+				67549CFB29870C280081B2C6 /* Assets.xcassets */,
+				67549CFD29870C280081B2C6 /* Preview Content */,
+			);
+			path = FLAGMAPPER;
+			sourceTree = "<group>";
+		};
+		67549CFD29870C280081B2C6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				67549CFE29870C280081B2C6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		67549D0729870C290081B2C6 /* FLAGMAPPERTests */ = {
+			isa = PBXGroup;
+			children = (
+				67549D0829870C290081B2C6 /* FLAGMAPPERTests.swift */,
+			);
+			path = FLAGMAPPERTests;
+			sourceTree = "<group>";
+		};
+		67549D1129870C290081B2C6 /* FLAGMAPPERUITests */ = {
+			isa = PBXGroup;
+			children = (
+				67549D1229870C290081B2C6 /* FLAGMAPPERUITests.swift */,
+				67549D1429870C290081B2C6 /* FLAGMAPPERUITestsLaunchTests.swift */,
+			);
+			path = FLAGMAPPERUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67549CF329870C270081B2C6 /* FLAGMAPPER */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67549D1829870C290081B2C6 /* Build configuration list for PBXNativeTarget "FLAGMAPPER" */;
+			buildPhases = (
+				67549CF029870C270081B2C6 /* Sources */,
+				67549CF129870C270081B2C6 /* Frameworks */,
+				67549CF229870C270081B2C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FLAGMAPPER;
+			productName = FLAGMAPPER;
+			productReference = 67549CF429870C270081B2C6 /* FLAGMAPPER.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67549D0329870C290081B2C6 /* FLAGMAPPERTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67549D1B29870C290081B2C6 /* Build configuration list for PBXNativeTarget "FLAGMAPPERTests" */;
+			buildPhases = (
+				67549D0029870C290081B2C6 /* Sources */,
+				67549D0129870C290081B2C6 /* Frameworks */,
+				67549D0229870C290081B2C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67549D0629870C290081B2C6 /* PBXTargetDependency */,
+			);
+			name = FLAGMAPPERTests;
+			productName = FLAGMAPPERTests;
+			productReference = 67549D0429870C290081B2C6 /* FLAGMAPPERTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		67549D0D29870C290081B2C6 /* FLAGMAPPERUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67549D1E29870C290081B2C6 /* Build configuration list for PBXNativeTarget "FLAGMAPPERUITests" */;
+			buildPhases = (
+				67549D0A29870C290081B2C6 /* Sources */,
+				67549D0B29870C290081B2C6 /* Frameworks */,
+				67549D0C29870C290081B2C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67549D1029870C290081B2C6 /* PBXTargetDependency */,
+			);
+			name = FLAGMAPPERUITests;
+			productName = FLAGMAPPERUITests;
+			productReference = 67549D0E29870C290081B2C6 /* FLAGMAPPERUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67549CEC29870C270081B2C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					67549CF329870C270081B2C6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					67549D0329870C290081B2C6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 67549CF329870C270081B2C6;
+					};
+					67549D0D29870C290081B2C6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 67549CF329870C270081B2C6;
+					};
+				};
+			};
+			buildConfigurationList = 67549CEF29870C270081B2C6 /* Build configuration list for PBXProject "FLAGMAPPER" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67549CEB29870C270081B2C6;
+			productRefGroup = 67549CF529870C270081B2C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67549CF329870C270081B2C6 /* FLAGMAPPER */,
+				67549D0329870C290081B2C6 /* FLAGMAPPERTests */,
+				67549D0D29870C290081B2C6 /* FLAGMAPPERUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67549CF229870C270081B2C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67549CFF29870C280081B2C6 /* Preview Assets.xcassets in Resources */,
+				67549CFC29870C280081B2C6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67549D0229870C290081B2C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67549D0C29870C290081B2C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67549CF029870C270081B2C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B35AB3298AD6E000499247 /* ImageHandler.swift in Sources */,
+				67B35AAB298ACAF700499247 /* FileHandler.swift in Sources */,
+				67549D2429870F4A0081B2C6 /* ListView.swift in Sources */,
+				67549CFA29870C270081B2C6 /* ContentView.swift in Sources */,
+				67B35AB1298AD59B00499247 /* FMFlag.swift in Sources */,
+				67549D28298712380081B2C6 /* LocationManager.swift in Sources */,
+				67B35AAD298ACC9700499247 /* MapLocation.swift in Sources */,
+				67549D2229870F420081B2C6 /* MarkerView.swift in Sources */,
+				67549CF829870C270081B2C6 /* FLAGMAPPERApp.swift in Sources */,
+				67B35AAF298AD53500499247 /* FMLocation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67549D0029870C290081B2C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67549D0929870C290081B2C6 /* FLAGMAPPERTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67549D0A29870C290081B2C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67549D1329870C290081B2C6 /* FLAGMAPPERUITests.swift in Sources */,
+				67549D1529870C290081B2C6 /* FLAGMAPPERUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67549D0629870C290081B2C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67549CF329870C270081B2C6 /* FLAGMAPPER */;
+			targetProxy = 67549D0529870C290081B2C6 /* PBXContainerItemProxy */;
+		};
+		67549D1029870C290081B2C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67549CF329870C270081B2C6 /* FLAGMAPPER */;
+			targetProxy = 67549D0F29870C290081B2C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		67549D1629870C290081B2C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = cscs;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = cscs;
+				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = cscs;
+				INFOPLIST_KEY_NSLocationUsageDescription = cs;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = cscs;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67549D1729870C290081B2C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = cscs;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = cscs;
+				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = cscs;
+				INFOPLIST_KEY_NSLocationUsageDescription = cs;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = cscs;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67549D1929870C290081B2C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FLAGMAPPER/Preview Content\"";
+				DEVELOPMENT_TEAM = R5Z89H9P4V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mcculloch.FLAGMAPPER;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67549D1A29870C290081B2C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FLAGMAPPER/Preview Content\"";
+				DEVELOPMENT_TEAM = R5Z89H9P4V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mcculloch.FLAGMAPPER;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		67549D1C29870C290081B2C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5Z89H9P4V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mcculloch.FLAGMAPPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLAGMAPPER.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FLAGMAPPER";
+			};
+			name = Debug;
+		};
+		67549D1D29870C290081B2C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5Z89H9P4V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mcculloch.FLAGMAPPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLAGMAPPER.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FLAGMAPPER";
+			};
+			name = Release;
+		};
+		67549D1F29870C290081B2C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5Z89H9P4V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mcculloch.FLAGMAPPERUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FLAGMAPPER;
+			};
+			name = Debug;
+		};
+		67549D2029870C290081B2C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5Z89H9P4V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mcculloch.FLAGMAPPERUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FLAGMAPPER;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67549CEF29870C270081B2C6 /* Build configuration list for PBXProject "FLAGMAPPER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67549D1629870C290081B2C6 /* Debug */,
+				67549D1729870C290081B2C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67549D1829870C290081B2C6 /* Build configuration list for PBXNativeTarget "FLAGMAPPER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67549D1929870C290081B2C6 /* Debug */,
+				67549D1A29870C290081B2C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67549D1B29870C290081B2C6 /* Build configuration list for PBXNativeTarget "FLAGMAPPERTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67549D1C29870C290081B2C6 /* Debug */,
+				67549D1D29870C290081B2C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67549D1E29870C290081B2C6 /* Build configuration list for PBXNativeTarget "FLAGMAPPERUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67549D1F29870C290081B2C6 /* Debug */,
+				67549D2029870C290081B2C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67549CEC29870C270081B2C6 /* Project object */;
+}
