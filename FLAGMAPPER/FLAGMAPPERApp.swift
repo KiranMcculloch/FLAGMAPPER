@@ -2,16 +2,21 @@
 //  FLAGMAPPERApp.swift
 //  FLAGMAPPER
 //
-//  Created by Kiran McCulloch on 2023-01-29.
+//  Created by Kiran McCulloch on 2025-03-19.
 //
 
 import SwiftUI
 
 @main
 struct FLAGMAPPERApp: App {
+    let persistenceController = PersistenceController.shared
+    @StateObject var dataManager: DataManager = DataManager()
+    
     var body: some Scene {
         WindowGroup {
-            MapView()
+            LocationsListView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(dataManager)
         }
     }
 }

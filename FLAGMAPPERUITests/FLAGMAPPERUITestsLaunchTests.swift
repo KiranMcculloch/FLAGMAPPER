@@ -2,7 +2,7 @@
 //  FLAGMAPPERUITestsLaunchTests.swift
 //  FLAGMAPPERUITests
 //
-//  Created by Kiran McCulloch on 2023-01-29.
+//  Created by Kiran McCulloch on 2025-03-19.
 //
 
 import XCTest
@@ -17,6 +17,7 @@ final class FLAGMAPPERUITestsLaunchTests: XCTestCase {
         continueAfterFailure = false
     }
 
+    @MainActor
     func testLaunch() throws {
         let app = XCUIApplication()
         app.launch()
