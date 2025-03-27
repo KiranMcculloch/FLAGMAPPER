@@ -33,19 +33,21 @@ struct EditLocationView: View {
                     ).font(.largeTitle)
                         .fontWeight(.bold)
                         .autocorrectionDisabled(true)
+                        .foregroundStyle(.black)
                 } else {
                     Text(input_name)
                         .font(.largeTitle)
                         .fontWeight(.bold)
+                        .foregroundStyle(.black)
                 }
 
                 Button(action: {
                     if nameInEditMode {
                         self.nameInEditMode = false
+                        self.stored_location.name = input_name
                     } else {
                         self.nameInEditMode = true
                     }
-
                 }) {
                     if nameInEditMode {
                         Text("Done")
@@ -85,7 +87,8 @@ struct EditLocationView: View {
 }
 
 
-//
+
 //#Preview {
-//    EditLocationView(coordinate: )
+//    EditLocationView(stored_location: Location()).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//        .environmentObject(DataManager())
 //}

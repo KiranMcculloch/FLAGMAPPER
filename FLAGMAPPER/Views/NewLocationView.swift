@@ -15,27 +15,27 @@ struct NewLocationView: View {
     @State var nameInEditMode = false
     @Binding var coordinate: CLLocationCoordinate2D
     @State var input_name: String = "New Location"
-    @State var final_name: String = ""
+//    @State var final_name: String = ""
     
     var body: some View {
         VStack{
             HStack{
                 if nameInEditMode {
-                    TextField(
-                        input_name, text: $input_name
-                    ).font(.largeTitle)
+                    TextField(input_name, text: $input_name)
+                        .font(.largeTitle)
                         .fontWeight(.bold)
                         .autocorrectionDisabled(true)
+                        .foregroundStyle(.black)
                 } else {
                     Text(input_name)
                         .font(.largeTitle)
                         .fontWeight(.bold)
+                        .foregroundStyle(.black)
                 }
 
                 Button(action: {
                     if nameInEditMode {
                         self.nameInEditMode = false
-                        self.final_name = input_name
                     } else {
                         self.nameInEditMode = true
                     }
@@ -67,7 +67,7 @@ struct NewLocationView: View {
     private func saveLocation() {
         let newLocation = Location(context: viewContext)
         newLocation.id = UUID()
-        newLocation.name = self.final_name
+        newLocation.name = self.input_name
         newLocation.latitude = Float(self.coordinate.latitude)
         newLocation.longitude = Float(self.coordinate.longitude)
         do {
@@ -83,5 +83,5 @@ struct NewLocationView: View {
 
 //
 //#Preview {
-//    EditLocationView(coordinate: )
+//    NewLocationView(coordi)
 //}

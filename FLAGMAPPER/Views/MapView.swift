@@ -18,6 +18,9 @@ struct MapView: View{
         animation: .default)
     private var locations: FetchedResults<Location>
     @State var current_coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+    @State var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.785834, longitude: -122.406417), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+    
+    @State var sensoryTrigger = 0
     
     var body: some View{
         NavigationStack{
@@ -31,7 +34,7 @@ struct MapView: View{
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 40, height: 40)
-                                        .foregroundStyle(.white, .purple)
+                                        .foregroundStyle(.white, .yellow)
                                 }.onTapGesture {
                                     dataManager.editingLocation = location
                                     dataManager.showNewMapView = false
@@ -52,18 +55,27 @@ struct MapView: View{
                             }
                         }
                         
+                    }.mapControls {
+                        MapUserLocationButton()
                     }
-                    .onTapGesture {
-                        dataManager.showEditorMapView = false
-                        dataManager.showNewMapView = false
-                    }
+//                    .onTapGesture {
+//                        if dataManager.showEditorMapView || dataManager.showNewMapView {
+//                            dataManager.showEditorMapView = false
+//                            dataManager.showNewMapView = false
+//                        }
+//                    }
                     .gesture(LongPressGesture { position in
                         self.current_coordinate = proxy.convert(position, from: .global)!
                         dataManager.showEditorMapView = false
                         dataManager.showNewMapView = true
+                        self.sensoryTrigger += 1
                     })
-          
+                    .sensoryFeedback(.impact(flexibility: .rigid, intensity: 2.0), trigger: sensoryTrigger)
                 }
+                
+
+                
+                
                 VStack{
                     if dataManager.showNewMapView{
                         NewLocationView(coordinate: $current_coordinate, input_name: "New Location")
@@ -72,15 +84,13 @@ struct MapView: View{
                     if dataManager.showEditorMapView{
                         EditLocationView(stored_location: dataManager.editingLocation!)
                    }
+
                     Spacer()
-                    LocationButton {
-                        locationManager.requestLocation()
-                    }
-                        .frame(width: 180, height: 40)
-                        .cornerRadius(30)
-                        .symbolVariant(.fill)
-                        .foregroundColor(.white)
+
                 }
+                
+                
+                
                 
             }
         }
