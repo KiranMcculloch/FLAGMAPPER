@@ -14,9 +14,9 @@ struct FLAGMAPPERApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MapView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .environmentObject(dataManager)
+//            MapView()
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+//                .environmentObject(dataManager)
         }
     }
 }

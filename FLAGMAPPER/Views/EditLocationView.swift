@@ -21,7 +21,7 @@ struct EditLocationView: View {
     @EnvironmentObject var dataManager: DataManager
 
     @State var nameInEditMode = false
-    @State var stored_location : Location
+    @Binding var stored_location : Location?
     @State var input_name : String = ""
     
     var body: some View {
@@ -44,7 +44,7 @@ struct EditLocationView: View {
                 Button(action: {
                     if nameInEditMode {
                         self.nameInEditMode = false
-                        self.stored_location.name = input_name
+                        self.stored_location?.name = input_name
                     } else {
                         self.nameInEditMode = true
                     }
@@ -70,7 +70,7 @@ struct EditLocationView: View {
             }.padding()
         }.background(.white).clipShape(RoundedRectangle(cornerRadius: 25))
             .onAppear(
-                perform: {self.input_name = self.stored_location.name ?? "Unknown Name"}
+                perform: {self.input_name = self.stored_location?.name ?? "Unknown Name"}
             )
 
     }

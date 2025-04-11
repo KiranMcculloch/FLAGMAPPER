@@ -13,7 +13,7 @@ struct LocationsListView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Location.id, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Location.name, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Location>
 
@@ -22,9 +22,10 @@ struct LocationsListView: View {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Item at \(item.name ?? "unknown")")
+                        Text("Name: \(item.name ?? "unknown")")
+                        Text("ID: \(item.id?.uuidString ?? "unknown")")
                     } label: {
-                        Text(item.id?.uuidString ?? "unknown id")
+                        Text(item.name ?? "unknown name")
                     }
                 }
                 .onDelete(perform: deleteItems)

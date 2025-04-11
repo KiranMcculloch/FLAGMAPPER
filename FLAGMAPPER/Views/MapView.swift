@@ -17,10 +17,19 @@ struct MapView: View{
         sortDescriptors: [NSSortDescriptor(keyPath: \Location.id, ascending: true)],
         animation: .default)
     private var locations: FetchedResults<Location>
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Flag.id, ascending: true)],
+        animation: .default)
+    private var flags: FetchedResults<Flag>
+    
+
     @State var current_coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     @State var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.785834, longitude: -122.406417), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
     
+    @State var editing_location : Location? = nil
+    
     @State var sensoryTrigger = 0
+    
     
     var body: some View{
         NavigationStack{
@@ -34,9 +43,9 @@ struct MapView: View{
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 40, height: 40)
-                                        .foregroundStyle(.white, .yellow)
+                                        .foregroundStyle(.white, .purple)
                                 }.onTapGesture {
-                                    dataManager.editingLocation = location
+                                    editing_location = location
                                     dataManager.showNewMapView = false
                                     dataManager.showEditorMapView = true
                                     print("tapped on \(String(describing: location.name))")
@@ -58,12 +67,6 @@ struct MapView: View{
                     }.mapControls {
                         MapUserLocationButton()
                     }
-//                    .onTapGesture {
-//                        if dataManager.showEditorMapView || dataManager.showNewMapView {
-//                            dataManager.showEditorMapView = false
-//                            dataManager.showNewMapView = false
-//                        }
-//                    }
                     .gesture(LongPressGesture { position in
                         self.current_coordinate = proxy.convert(position, from: .global)!
                         dataManager.showEditorMapView = false
@@ -73,19 +76,45 @@ struct MapView: View{
                     .sensoryFeedback(.impact(flexibility: .rigid, intensity: 2.0), trigger: sensoryTrigger)
                 }
                 
-
                 
                 
                 VStack{
                     if dataManager.showNewMapView{
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 500, height: 2000)
+                                .opacity(0.1)
+                                .layoutPriority(-1)
+                                .onTapGesture {
+                                    dataManager.showNewMapView = false
+                                }
                         NewLocationView(coordinate: $current_coordinate, input_name: "New Location")
                             .frame(width: 300, height: 300)
+                        }
                     }
                     if dataManager.showEditorMapView{
-                        EditLocationView(stored_location: dataManager.editingLocation!)
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 500, height: 2000)
+                                .opacity(0.1)
+                                .layoutPriority(-1)
+                                .onTapGesture {
+                                    dataManager.showEditorMapView = false
+                                }
+                            EditLocationView(stored_location: $editing_location)
+                                .frame(width: 300, height: 300)
+                        }
                    }
-
                     Spacer()
+                    NavigationLink{
+                        CatalogView()
+                    } label: {
+                        Label("Catalog", systemImage: "folder")
+                            .padding()
+                    }.background(
+                        RoundedRectangle(cornerRadius: 25).foregroundStyle(.white)
+                    )
+                
 
                 }
                 
